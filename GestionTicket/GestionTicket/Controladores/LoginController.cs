@@ -24,12 +24,14 @@ namespace GestionTicket.Controladores
         {
             if (vista.EmailTextBox.Text == "") {
                 vista.errorProvider1.SetError(vista.EmailTextBox, "Debes ingresar un Email");
+                vista.EmailTextBox.Focus();
                 return; 
             }
 
             if (vista.ClaveTextBox.Text == "")
             {
                 vista.errorProvider1.SetError(vista.ClaveTextBox, "Debes ingresar una Clave");
+                vista.ClaveTextBox.Focus(); 
                 return;
             }
 
@@ -46,6 +48,11 @@ namespace GestionTicket.Controladores
             if (valido)
             {
                 MessageBox.Show("Usuario valido");
+
+                vista.Hide(); 
+                MenuView menuView = new MenuView();
+                menuView.ShowDialog();
+                vista.Close(); 
             }
             else
             {
