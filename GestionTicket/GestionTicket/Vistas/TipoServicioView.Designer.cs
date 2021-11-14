@@ -43,6 +43,7 @@ namespace GestionTicket.Vistas
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.IdTextBox = new System.Windows.Forms.TextBox();
+            this.SeleccionarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TipoServicioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -132,9 +133,9 @@ namespace GestionTicket.Vistas
             this.TipoServicioDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TipoServicioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TipoServicioDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TipoServicioDataGridView.Location = new System.Drawing.Point(0, 373);
+            this.TipoServicioDataGridView.Location = new System.Drawing.Point(0, 403);
             this.TipoServicioDataGridView.Name = "TipoServicioDataGridView";
-            this.TipoServicioDataGridView.Size = new System.Drawing.Size(669, 178);
+            this.TipoServicioDataGridView.Size = new System.Drawing.Size(669, 148);
             this.TipoServicioDataGridView.TabIndex = 9;
             // 
             // errorProvider1
@@ -158,11 +159,22 @@ namespace GestionTicket.Vistas
             this.IdTextBox.Size = new System.Drawing.Size(205, 30);
             this.IdTextBox.TabIndex = 11;
             // 
+            // SeleccionarButton
+            // 
+            this.SeleccionarButton.BackColor = System.Drawing.Color.SpringGreen;
+            this.SeleccionarButton.Location = new System.Drawing.Point(283, 355);
+            this.SeleccionarButton.Name = "SeleccionarButton";
+            this.SeleccionarButton.Size = new System.Drawing.Size(123, 42);
+            this.SeleccionarButton.TabIndex = 12;
+            this.SeleccionarButton.Text = "Seleccionar";
+            this.SeleccionarButton.UseVisualStyleBackColor = false;
+            // 
             // TipoServicioView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 551);
+            this.Controls.Add(this.SeleccionarButton);
             this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TipoServicioDataGridView);
@@ -202,5 +214,6 @@ namespace GestionTicket.Vistas
         public System.Windows.Forms.ErrorProvider errorProvider1;
         public System.Windows.Forms.TextBox IdTextBox;
         public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Button SeleccionarButton;
     }
 }

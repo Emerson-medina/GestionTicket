@@ -15,30 +15,38 @@ namespace GestionTicket.Modelos.DAO
         SqlCommand comando = new SqlCommand(); 
         public bool AddTipoServicio(TipoServicio tipoServicio)
         {
+            
             bool inserto = false;
-
-            try
+            if (VerificarDuplicados(tipoServicio))
             {
-                StringBuilder consulta = new StringBuilder();
-                consulta.Append("INSERT INTO TIPO_SERVICIO VALUES (@Nombre, @Descripcion)");
-
-                comando.Connection = MiConexion;
-                MiConexion.Open();
-
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = consulta.ToString();
-                comando.Parameters.AddWithValue("@Nombre", tipoServicio.Nombre);
-                comando.Parameters.AddWithValue("@Descripcion", tipoServicio.Descripcion);
-
-                comando.ExecuteNonQuery(); 
-                MiConexion.Close();
-                inserto = true; 
-            }
-            catch (Exception ex)
+                MessageBox.Show("Estas intentando guardar un tipo servicio ya existente");
+            } else
             {
-                MessageBox.Show("Ocurrió un error al intentar registrar el tipo de servicio");
-                MessageBox.Show(ex.Message); 
+                try
+                {
+                    StringBuilder consulta = new StringBuilder();
+                    consulta.Append("INSERT INTO TIPO_SERVICIO VALUES (@Nombre, @Descripcion)");
+
+                    comando.Connection = MiConexion;
+                    MiConexion.Open();
+                    comando.Parameters.Clear(); 
+
+                    comando.CommandType = System.Data.CommandType.Text;
+                    comando.CommandText = consulta.ToString();
+                    comando.Parameters.AddWithValue("@Nombre", tipoServicio.Nombre);
+                    comando.Parameters.AddWithValue("@Descripcion", tipoServicio.Descripcion);
+
+                    comando.ExecuteNonQuery();
+                    MiConexion.Close();
+                    inserto = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar registrar el tipo de servicio");
+                    MessageBox.Show(ex.Message);
+                }
             }
+            
             return inserto; 
         }
 

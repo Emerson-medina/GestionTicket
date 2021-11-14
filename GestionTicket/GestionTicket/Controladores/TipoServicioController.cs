@@ -13,15 +13,27 @@ namespace GestionTicket.Controladores
     public class TipoServicioController
     {
         TipoServicioView vista;
+        TicketView vistaTicket; 
         string operacion = ""; 
-        public TipoServicioController(TipoServicioView view)
+        public TipoServicioController(TipoServicioView view, TicketView tickedView)
         {
+            vistaTicket = tickedView; 
             vista = view;
             vista.AgregarButton.Click += new EventHandler(AgregarTipoServicio);
             vista.ModificarButton.Click += new EventHandler(ModificarTipoServicio);
             vista.EliminarButton.Click += new EventHandler(EliminarTipoServicio);
-            vista.CancelarButton.Click += new EventHandler(CancelarOperacion); 
+            vista.CancelarButton.Click += new EventHandler(CancelarOperacion);
+            vista.SeleccionarButton.Click += new EventHandler(SeleccionarTipoServicio); 
             vista.Load += Vista_Load;
+        }
+
+        private void SeleccionarTipoServicio(object sender, EventArgs e)
+        {
+            vistaTicket.IdTipoServicio = Convert.ToInt32(vista.TipoServicioDataGridView.CurrentRow.Cells["ID"].Value);
+            vistaTicket.TipoServicioTextBox.Text = vista.TipoServicioDataGridView.CurrentRow.Cells["NOMBRE"].Value.ToString();
+            MessageBox.Show($"El valor de idTipoServicio es: {vistaTicket.IdTipoServicio} ");
+            vista.Close();
+
         }
 
         private void CancelarOperacion(object sender, EventArgs e)

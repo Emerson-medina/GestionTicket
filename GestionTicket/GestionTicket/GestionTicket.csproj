@@ -36,6 +36,7 @@
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Syncfusion.Core.WinForms, Version=19.3460.0.43, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Grid.Base, Version=19.3460.0.43, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Grid.Windows, Version=19.3460.0.43, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Shared.Base, Version=19.3460.0.43, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -58,16 +59,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ClienteController.cs" />
+    <Compile Include="Controladores\EstadoTicketController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\MenuController.cs" />
+    <Compile Include="Controladores\TicketControlller.cs" />
     <Compile Include="Controladores\TipoServicioController.cs" />
+    <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
+    <Compile Include="Modelos\DAO\EstadosTicketDAO.cs" />
+    <Compile Include="Modelos\DAO\TicketDAO.cs" />
     <Compile Include="Modelos\DAO\TipoServicioDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
+    <Compile Include="Modelos\Entidades\Cliente.cs" />
+    <Compile Include="Modelos\Entidades\EstadoTicket.cs" />
+    <Compile Include="Modelos\Entidades\Ticket.cs" />
     <Compile Include="Modelos\Entidades\TipoServicio.cs" />
     <Compile Include="Modelos\Entidades\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\ClienteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ClienteView.Designer.cs">
+      <DependentUpon>ClienteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\EstadosTicketView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\EstadosTicketView.Designer.cs">
+      <DependentUpon>EstadosTicketView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +101,12 @@
     </Compile>
     <Compile Include="Vistas\MenuView.Designer.cs">
       <DependentUpon>MenuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\TicketView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\TicketView.Designer.cs">
+      <DependentUpon>TicketView.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\TipoServicioView.cs">
       <SubType>Form</SubType>
@@ -96,11 +124,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vistas\ClienteView.resx">
+      <DependentUpon>ClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\EstadosTicketView.resx">
+      <DependentUpon>EstadosTicketView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\MenuView.resx">
       <DependentUpon>MenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\TicketView.resx">
+      <DependentUpon>TicketView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\TipoServicioView.resx">
       <DependentUpon>TipoServicioView.cs</DependentUpon>

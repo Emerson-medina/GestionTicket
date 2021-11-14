@@ -11,18 +11,12 @@ using System.Windows.Forms;
 
 namespace GestionTicket.Vistas
 {
-    public partial class TipoServicioView : Form
+    public partial class EstadosTicketView : Form
     {
-        public TipoServicioView(TicketView ticketView)
+        public EstadosTicketView()
         {
             InitializeComponent();
-
-            TipoServicioController controlador = new TipoServicioController(this, ticketView); 
-        }
-
-        public TipoServicioView()
-        {
-            InitializeComponent();
+            EstadoTicketController controlador = new EstadoTicketController(this); 
         }
     }
 }
