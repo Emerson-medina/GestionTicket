@@ -135,7 +135,7 @@ namespace GestionTicket.Vistas
             this.TipoServicioDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TipoServicioDataGridView.Location = new System.Drawing.Point(0, 403);
             this.TipoServicioDataGridView.Name = "TipoServicioDataGridView";
-            this.TipoServicioDataGridView.Size = new System.Drawing.Size(669, 148);
+            this.TipoServicioDataGridView.Size = new System.Drawing.Size(735, 148);
             this.TipoServicioDataGridView.TabIndex = 9;
             // 
             // errorProvider1
@@ -162,7 +162,7 @@ namespace GestionTicket.Vistas
             // SeleccionarButton
             // 
             this.SeleccionarButton.BackColor = System.Drawing.Color.SpringGreen;
-            this.SeleccionarButton.Location = new System.Drawing.Point(283, 355);
+            this.SeleccionarButton.Location = new System.Drawing.Point(590, 306);
             this.SeleccionarButton.Name = "SeleccionarButton";
             this.SeleccionarButton.Size = new System.Drawing.Size(123, 42);
             this.SeleccionarButton.TabIndex = 12;
@@ -173,7 +173,7 @@ namespace GestionTicket.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 551);
+            this.ClientSize = new System.Drawing.Size(735, 551);
             this.Controls.Add(this.SeleccionarButton);
             this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.label4);

@@ -205,19 +205,6 @@ namespace GestionTicket.Controladores
             {
                 return;
             }
-            /* if (vista.NombreTextBox.Text == "")
-             {
-                 vista.errorProvider1.SetError(vista.NombreTextBox, "Debes ingresar un Nombre");
-                 vista.NombreTextBox.Focus();
-                 return;
-             }
-
-             if (vista.DescripcionTextBox.Text == "")
-             {
-                 vista.errorProvider1.SetError(vista.DescripcionTextBox, "Debes ingresar una Descripcion");
-                 vista.DescripcionTextBox.Focus();
-                 return;
-             }*/
 
 
         }

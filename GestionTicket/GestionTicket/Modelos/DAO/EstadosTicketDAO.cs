@@ -19,7 +19,7 @@ namespace GestionTicket.Modelos.DAO
             try
             {
                 StringBuilder consulta = new StringBuilder();
-                consulta.Append(" UPDATE ESTADO_TICKET SET ESTADO = @Estado WHERE ID_TICKET = @IdTicket ); ");
+                consulta.Append(" UPDATE ESTADO_TICKET SET ESTADO = @Estado WHERE ID_TICKET = @IdTicket ; ");
 
                 comando.Connection = MiConexion;
                 MiConexion.Open();
@@ -48,7 +48,7 @@ namespace GestionTicket.Modelos.DAO
             try
             {
                 StringBuilder consulta = new StringBuilder();
-                consulta.Append("SELECT * FROM ESTADO_CLIENTE");
+                consulta.Append(" SELECT * FROM ESTADO_TICKET ; ");
 
                 comando.Connection = MiConexion;
                 MiConexion.Open();

@@ -11,20 +11,58 @@ namespace GestionTicket.Controladores
     public class MenuController
     {
         MenuView vista;
-        TicketView ticketView;
-        TipoServicioView tipoServicioView; 
+        public TicketView ticketView;
+        TipoServicioView tipoServicioView;
+        EstadosTicketView estadoTicketView;
+        TodosDetallesTicketView todosDetallesTicketview; 
         public MenuController (MenuView view)
         {
             vista = view;
             vista.TipoServicioToolStripButton.Click += new EventHandler(MostrarTipoServicio);
             vista.AgregarTicketToolStripButton.Click += new EventHandler(MostrarAgregarTicket);
-            vista.Deactivate += Vista_Deactivate;
+            vista.EstadoTicketToolStripButton.Click += new EventHandler(MostrarEstadoTicket);
+            vista.TodosDetallesTicketToolStripButton.Click += new EventHandler(MostrarTodosDetallesTicket); 
             vista.Load += Vista_Load;
         }
 
-        private void Vista_Deactivate(object sender, EventArgs e)
+        private void MostrarTodosDetallesTicket(object sender, EventArgs e)
         {
-            //vista.Hide(); 
+            if (todosDetallesTicketview == null)
+            {
+                todosDetallesTicketview = new TodosDetallesTicketView(this);
+                todosDetallesTicketview.MdiParent = vista;
+                todosDetallesTicketview.FormClosed += TodosDetallesTicketview_FormClosed;
+                todosDetallesTicketview.Show();
+            }
+            else
+            {
+                todosDetallesTicketview.Activate();
+            }
+        }
+
+        private void TodosDetallesTicketview_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            todosDetallesTicketview = null; 
+        }
+
+        private void MostrarEstadoTicket(object sender, EventArgs e)
+        {
+            if (estadoTicketView == null)
+            {
+                estadoTicketView = new EstadosTicketView();
+                estadoTicketView.MdiParent = vista;
+                estadoTicketView.FormClosed += EstadoTicketView_FormClosed;
+                estadoTicketView.Show();
+            }
+            else
+            {
+                estadoTicketView.Activate();
+            }
+        }
+
+        private void EstadoTicketView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            estadoTicketView = null; 
         }
 
         private void MostrarAgregarTicket(object sender, EventArgs e)

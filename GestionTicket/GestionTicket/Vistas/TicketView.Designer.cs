@@ -34,8 +34,6 @@ namespace GestionTicket.Vistas
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.EquipoTextBox = new System.Windows.Forms.TextBox();
             this.ClienteTextBox = new System.Windows.Forms.TextBox();
             this.TipoServicioTextBox = new System.Windows.Forms.TextBox();
             this.DetalleTextBox = new System.Windows.Forms.TextBox();
@@ -43,7 +41,6 @@ namespace GestionTicket.Vistas
             this.CostoTextBox = new System.Windows.Forms.TextBox();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.CancelarButton = new System.Windows.Forms.Button();
-            this.EquipoButton = new System.Windows.Forms.Button();
             this.ClienteButton = new System.Windows.Forms.Button();
             this.TipoServicioButton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -87,23 +84,6 @@ namespace GestionTicket.Vistas
             this.label5.Size = new System.Drawing.Size(74, 22);
             this.label5.TabIndex = 4;
             this.label5.Text = "Detalle";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(75, 131);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 22);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Equipo";
-            // 
-            // EquipoTextBox
-            // 
-            this.EquipoTextBox.Location = new System.Drawing.Point(177, 131);
-            this.EquipoTextBox.Name = "EquipoTextBox";
-            this.EquipoTextBox.ReadOnly = true;
-            this.EquipoTextBox.Size = new System.Drawing.Size(374, 30);
-            this.EquipoTextBox.TabIndex = 8;
             // 
             // ClienteTextBox
             // 
@@ -163,15 +143,6 @@ namespace GestionTicket.Vistas
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.UseVisualStyleBackColor = true;
             // 
-            // EquipoButton
-            // 
-            this.EquipoButton.Location = new System.Drawing.Point(557, 131);
-            this.EquipoButton.Name = "EquipoButton";
-            this.EquipoButton.Size = new System.Drawing.Size(47, 30);
-            this.EquipoButton.TabIndex = 16;
-            this.EquipoButton.Text = "...";
-            this.EquipoButton.UseVisualStyleBackColor = true;
-            // 
             // ClienteButton
             // 
             this.ClienteButton.Location = new System.Drawing.Point(557, 169);
@@ -201,7 +172,6 @@ namespace GestionTicket.Vistas
             this.ClientSize = new System.Drawing.Size(665, 490);
             this.Controls.Add(this.TipoServicioButton);
             this.Controls.Add(this.ClienteButton);
-            this.Controls.Add(this.EquipoButton);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.CostoTextBox);
@@ -209,8 +179,6 @@ namespace GestionTicket.Vistas
             this.Controls.Add(this.DetalleTextBox);
             this.Controls.Add(this.TipoServicioTextBox);
             this.Controls.Add(this.ClienteTextBox);
-            this.Controls.Add(this.EquipoTextBox);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -231,8 +199,6 @@ namespace GestionTicket.Vistas
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox EquipoTextBox;
         public System.Windows.Forms.TextBox ClienteTextBox;
         public System.Windows.Forms.TextBox TipoServicioTextBox;
         public System.Windows.Forms.TextBox DetalleTextBox;
@@ -240,7 +206,6 @@ namespace GestionTicket.Vistas
         public System.Windows.Forms.TextBox CostoTextBox;
         public System.Windows.Forms.Button GuardarButton;
         public System.Windows.Forms.Button CancelarButton;
-        public System.Windows.Forms.Button EquipoButton;
         public System.Windows.Forms.Button ClienteButton;
         public System.Windows.Forms.Button TipoServicioButton;
         public System.Windows.Forms.ErrorProvider errorProvider1;

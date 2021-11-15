@@ -26,7 +26,9 @@ namespace GestionTicket.Controladores
         private void Vista_Load(object sender, EventArgs e)
         {
             ListarTicket();
-            vista.GuardarButton.Enabled = false; 
+            vista.GuardarButton.Enabled = false;
+            vista.EstadoTicketComboBox.Enabled = false;
+            vista.WindowState = FormWindowState.Maximized;
         }
 
         private void ListarTicket()
@@ -39,8 +41,12 @@ namespace GestionTicket.Controladores
             if (vista.EstadosTicketDataGridView.SelectedRows.Count > 0)
             {
                 vista.GuardarButton.Enabled = true;
+                vista.EstadoTicketComboBox.Enabled = true; 
                 vista.IdTicketTextBox.Text = vista.EstadosTicketDataGridView.CurrentRow.Cells["ID"].Value.ToString();
-                vista.EstadoTicketListBox.SelectedItem = vista.EstadosTicketDataGridView.CurrentRow.Cells["ESTADO"].Value.ToString(); 
+                vista.EstadoTicketComboBox.SelectedItem = vista.EstadosTicketDataGridView.CurrentRow.Cells["ESTADO"].Value.ToString(); 
+            } else
+            {
+                MessageBox.Show("Debes seleccionar un registro"); 
             }
         }
 
@@ -48,7 +54,7 @@ namespace GestionTicket.Controladores
         {
             if (RevisarContenidoControles())
             {
-                estadoTicket.Estado = vista.EstadoTicketListBox.SelectedItem.ToString();
+                estadoTicket.Estado = vista.EstadoTicketComboBox.SelectedItem.ToString();
                 estadoTicket.Id = Convert.ToInt32(vista.IdTicketTextBox.Text);
 
                 bool inserto = estadosTicketDAO.GuardarEstado(estadoTicket);
@@ -57,6 +63,9 @@ namespace GestionTicket.Controladores
                 {
                     MessageBox.Show("Registro guardado exitosamente");
                     LimpiarControles();
+                    ListarTicket(); 
+                    vista.GuardarButton.Enabled = false;
+                    vista.EstadoTicketComboBox.Enabled = false; 
                 }
             }
            
@@ -65,7 +74,7 @@ namespace GestionTicket.Controladores
         private void LimpiarControles()
         {
             vista.IdTicketTextBox.Clear();
-            vista.EstadoTicketListBox.ClearSelected(); 
+            vista.EstadoTicketComboBox.SelectedItem = "";  
         }
 
         private bool RevisarContenidoControles()

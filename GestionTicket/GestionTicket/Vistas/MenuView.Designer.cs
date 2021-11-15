@@ -32,16 +32,16 @@ namespace GestionTicket.Vistas
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.TipoServicioToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.AgregarTicketToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.TipoServicioToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.EstadoTicketToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.AgregarTicketToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.TodosDetallesTicketToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
@@ -78,7 +78,7 @@ namespace GestionTicket.Vistas
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem4;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(800, 141);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -101,7 +101,7 @@ namespace GestionTicket.Vistas
             this.toolStripTabItem1.Panel.TabIndex = 2;
             this.toolStripTabItem1.Panel.Text = "Tipos Servicio";
             this.toolStripTabItem1.Position = 0;
-            this.toolStripTabItem1.Size = new System.Drawing.Size(93, 30);
+            this.toolStripTabItem1.Size = new System.Drawing.Size(83, 19);
             this.toolStripTabItem1.Tag = "1";
             this.toolStripTabItem1.Text = "Tipos Servicio";
             // 
@@ -124,17 +124,6 @@ namespace GestionTicket.Vistas
             this.toolStripEx1.Size = new System.Drawing.Size(137, 75);
             this.toolStripEx1.TabIndex = 0;
             // 
-            // TipoServicioToolStripButton
-            // 
-            this.TipoServicioToolStripButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoServicioToolStripButton.Image = global::GestionTicket.Properties.Resources.TipoServicio;
-            this.TipoServicioToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.TipoServicioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TipoServicioToolStripButton.Name = "TipoServicioToolStripButton";
-            this.TipoServicioToolStripButton.Size = new System.Drawing.Size(80, 58);
-            this.TipoServicioToolStripButton.Text = "Tipo Servicio";
-            this.TipoServicioToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripTabItem2
             // 
             this.toolStripTabItem2.Name = "toolStripTabItem2";
@@ -147,7 +136,7 @@ namespace GestionTicket.Vistas
             this.toolStripTabItem2.Panel.TabIndex = 3;
             this.toolStripTabItem2.Panel.Text = "Estados Ticket";
             this.toolStripTabItem2.Position = 1;
-            this.toolStripTabItem2.Size = new System.Drawing.Size(96, 30);
+            this.toolStripTabItem2.Size = new System.Drawing.Size(86, 19);
             this.toolStripTabItem2.Tag = "2";
             this.toolStripTabItem2.Text = "Estados Ticket";
             // 
@@ -160,25 +149,14 @@ namespace GestionTicket.Vistas
             this.toolStripEx2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx2.Image = null;
             this.toolStripEx2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton2});
+            this.EstadoTicketToolStripButton});
             this.toolStripEx2.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx2.Name = "toolStripEx2";
             this.toolStripEx2.Office12Mode = false;
             this.toolStripEx2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx2.Size = new System.Drawing.Size(199, 65);
+            this.toolStripEx2.Size = new System.Drawing.Size(199, 75);
             this.toolStripEx2.TabIndex = 0;
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.Image = global::GestionTicket.Properties.Resources.EstadoTicket;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(78, 48);
-            this.toolStripButton2.Text = "Estado ticket";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripTabItem3
             // 
@@ -192,7 +170,7 @@ namespace GestionTicket.Vistas
             this.toolStripTabItem3.Panel.TabIndex = 4;
             this.toolStripTabItem3.Panel.Text = "Ticket";
             this.toolStripTabItem3.Position = 2;
-            this.toolStripTabItem3.Size = new System.Drawing.Size(53, 30);
+            this.toolStripTabItem3.Size = new System.Drawing.Size(43, 19);
             this.toolStripTabItem3.Tag = "3";
             this.toolStripTabItem3.Text = "Ticket";
             // 
@@ -214,17 +192,6 @@ namespace GestionTicket.Vistas
             this.toolStripEx3.Size = new System.Drawing.Size(164, 75);
             this.toolStripEx3.TabIndex = 0;
             // 
-            // AgregarTicketToolStripButton
-            // 
-            this.AgregarTicketToolStripButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgregarTicketToolStripButton.Image = global::GestionTicket.Properties.Resources.Tickets;
-            this.AgregarTicketToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.AgregarTicketToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.AgregarTicketToolStripButton.Name = "AgregarTicketToolStripButton";
-            this.AgregarTicketToolStripButton.Size = new System.Drawing.Size(88, 58);
-            this.AgregarTicketToolStripButton.Text = "Agregar Ticket";
-            this.AgregarTicketToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripTabItem4
             // 
             this.toolStripTabItem4.Name = "toolStripTabItem4";
@@ -237,7 +204,7 @@ namespace GestionTicket.Vistas
             this.toolStripTabItem4.Panel.TabIndex = 5;
             this.toolStripTabItem4.Panel.Text = "Detalles Ticket";
             this.toolStripTabItem4.Position = 3;
-            this.toolStripTabItem4.Size = new System.Drawing.Size(97, 30);
+            this.toolStripTabItem4.Size = new System.Drawing.Size(87, 19);
             this.toolStripTabItem4.Tag = "4";
             this.toolStripTabItem4.Text = "Detalles Ticket";
             // 
@@ -250,7 +217,7 @@ namespace GestionTicket.Vistas
             this.toolStripEx4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx4.Image = null;
             this.toolStripEx4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton4});
+            this.TodosDetallesTicketToolStripButton});
             this.toolStripEx4.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx4.Name = "toolStripEx4";
             this.toolStripEx4.Office12Mode = false;
@@ -259,16 +226,49 @@ namespace GestionTicket.Vistas
             this.toolStripEx4.Size = new System.Drawing.Size(145, 75);
             this.toolStripEx4.TabIndex = 0;
             // 
-            // toolStripButton4
+            // TipoServicioToolStripButton
             // 
-            this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton4.Image = global::GestionTicket.Properties.Resources.DetallesTicket;
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(88, 58);
-            this.toolStripButton4.Text = "Detalles Ticket";
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.TipoServicioToolStripButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoServicioToolStripButton.Image = global::GestionTicket.Properties.Resources.TipoServicio;
+            this.TipoServicioToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.TipoServicioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TipoServicioToolStripButton.Name = "TipoServicioToolStripButton";
+            this.TipoServicioToolStripButton.Size = new System.Drawing.Size(80, 58);
+            this.TipoServicioToolStripButton.Text = "Tipo Servicio";
+            this.TipoServicioToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // EstadoTicketToolStripButton
+            // 
+            this.EstadoTicketToolStripButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EstadoTicketToolStripButton.Image = global::GestionTicket.Properties.Resources.EstadoTicket;
+            this.EstadoTicketToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.EstadoTicketToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EstadoTicketToolStripButton.Name = "EstadoTicketToolStripButton";
+            this.EstadoTicketToolStripButton.Size = new System.Drawing.Size(78, 58);
+            this.EstadoTicketToolStripButton.Text = "Estado ticket";
+            this.EstadoTicketToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // AgregarTicketToolStripButton
+            // 
+            this.AgregarTicketToolStripButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarTicketToolStripButton.Image = global::GestionTicket.Properties.Resources.Tickets;
+            this.AgregarTicketToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.AgregarTicketToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AgregarTicketToolStripButton.Name = "AgregarTicketToolStripButton";
+            this.AgregarTicketToolStripButton.Size = new System.Drawing.Size(88, 58);
+            this.AgregarTicketToolStripButton.Text = "Agregar Ticket";
+            this.AgregarTicketToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // TodosDetallesTicketToolStripButton
+            // 
+            this.TodosDetallesTicketToolStripButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TodosDetallesTicketToolStripButton.Image = global::GestionTicket.Properties.Resources.DetallesTicket;
+            this.TodosDetallesTicketToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.TodosDetallesTicketToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TodosDetallesTicketToolStripButton.Name = "TodosDetallesTicketToolStripButton";
+            this.TodosDetallesTicketToolStripButton.Size = new System.Drawing.Size(88, 58);
+            this.TodosDetallesTicketToolStripButton.Text = "Detalles Ticket";
+            this.TodosDetallesTicketToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // MenuView
             // 
@@ -309,10 +309,10 @@ namespace GestionTicket.Vistas
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem4;
         public System.Windows.Forms.ToolStripButton TipoServicioToolStripButton;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx2;
-        public System.Windows.Forms.ToolStripButton toolStripButton2;
+        public System.Windows.Forms.ToolStripButton EstadoTicketToolStripButton;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx3;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx4;
         public System.Windows.Forms.ToolStripButton AgregarTicketToolStripButton;
-        public System.Windows.Forms.ToolStripButton toolStripButton4;
+        public System.Windows.Forms.ToolStripButton TodosDetallesTicketToolStripButton;
     }
 }

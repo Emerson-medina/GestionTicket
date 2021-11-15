@@ -16,7 +16,9 @@ namespace GestionTicket.Vistas
         MenuView VistaMenu;
         public int IdCliente;
         public int IdTipoServicio;
+        public int IdTicket; 
 
+        public string operacion = ""; 
         public TicketView(MenuView menuView)
         {
             

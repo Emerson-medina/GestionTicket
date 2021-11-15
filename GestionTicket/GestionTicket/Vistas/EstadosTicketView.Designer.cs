@@ -34,12 +34,11 @@ namespace GestionTicket.Vistas
             this.EstadosTicketDataGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.DetallesButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.ModificarButton = new System.Windows.Forms.Button();
             this.IdTicketTextBox = new System.Windows.Forms.TextBox();
-            this.EstadoTicketListBox = new System.Windows.Forms.ListBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EstadoTicketComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.EstadosTicketDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +56,7 @@ namespace GestionTicket.Vistas
             // 
             // EstadosTicketDataGridView
             // 
+            this.EstadosTicketDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.EstadosTicketDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EstadosTicketDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.EstadosTicketDataGridView.Location = new System.Drawing.Point(0, 216);
@@ -82,16 +82,6 @@ namespace GestionTicket.Vistas
             this.label3.TabIndex = 3;
             this.label3.Text = "Estado Ticket";
             // 
-            // DetallesButton
-            // 
-            this.DetallesButton.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.DetallesButton.Location = new System.Drawing.Point(486, 74);
-            this.DetallesButton.Name = "DetallesButton";
-            this.DetallesButton.Size = new System.Drawing.Size(98, 55);
-            this.DetallesButton.TabIndex = 4;
-            this.DetallesButton.Text = "Ver Detalles";
-            this.DetallesButton.UseVisualStyleBackColor = false;
-            // 
             // GuardarButton
             // 
             this.GuardarButton.Location = new System.Drawing.Point(189, 173);
@@ -115,37 +105,35 @@ namespace GestionTicket.Vistas
             this.IdTicketTextBox.Location = new System.Drawing.Point(189, 66);
             this.IdTicketTextBox.Name = "IdTicketTextBox";
             this.IdTicketTextBox.ReadOnly = true;
-            this.IdTicketTextBox.Size = new System.Drawing.Size(144, 30);
+            this.IdTicketTextBox.Size = new System.Drawing.Size(172, 30);
             this.IdTicketTextBox.TabIndex = 7;
-            // 
-            // EstadoTicketListBox
-            // 
-            this.EstadoTicketListBox.FormattingEnabled = true;
-            this.EstadoTicketListBox.ItemHeight = 22;
-            this.EstadoTicketListBox.Items.AddRange(new object[] {
-            "Sin resolver",
-            "Abierto",
-            "En espera",
-            "Cerrado"});
-            this.EstadoTicketListBox.Location = new System.Drawing.Point(189, 120);
-            this.EstadoTicketListBox.Name = "EstadoTicketListBox";
-            this.EstadoTicketListBox.Size = new System.Drawing.Size(190, 26);
-            this.EstadoTicketListBox.TabIndex = 8;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // EstadoTicketComboBox
+            // 
+            this.EstadoTicketComboBox.FormattingEnabled = true;
+            this.EstadoTicketComboBox.Items.AddRange(new object[] {
+            "Sin resolver",
+            "Abierto",
+            "En espera",
+            "Cerrado"});
+            this.EstadoTicketComboBox.Location = new System.Drawing.Point(189, 116);
+            this.EstadoTicketComboBox.Name = "EstadoTicketComboBox";
+            this.EstadoTicketComboBox.Size = new System.Drawing.Size(172, 30);
+            this.EstadoTicketComboBox.TabIndex = 9;
             // 
             // EstadosTicketView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(647, 343);
-            this.Controls.Add(this.EstadoTicketListBox);
+            this.Controls.Add(this.EstadoTicketComboBox);
             this.Controls.Add(this.IdTicketTextBox);
             this.Controls.Add(this.ModificarButton);
             this.Controls.Add(this.GuardarButton);
-            this.Controls.Add(this.DetallesButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EstadosTicketDataGridView);
@@ -167,11 +155,10 @@ namespace GestionTicket.Vistas
         public System.Windows.Forms.DataGridView EstadosTicketDataGridView;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.Button DetallesButton;
         public System.Windows.Forms.Button GuardarButton;
         public System.Windows.Forms.Button ModificarButton;
         public System.Windows.Forms.TextBox IdTicketTextBox;
-        public System.Windows.Forms.ListBox EstadoTicketListBox;
         public System.Windows.Forms.ErrorProvider errorProvider1;
+        public System.Windows.Forms.ComboBox EstadoTicketComboBox;
     }
 }

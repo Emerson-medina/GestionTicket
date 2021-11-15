@@ -65,11 +65,13 @@
     <Compile Include="Controladores\MenuController.cs" />
     <Compile Include="Controladores\TicketControlller.cs" />
     <Compile Include="Controladores\TipoServicioController.cs" />
+    <Compile Include="Controladores\TodosDetallesTicketController.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
     <Compile Include="Modelos\DAO\EstadosTicketDAO.cs" />
     <Compile Include="Modelos\DAO\TicketDAO.cs" />
     <Compile Include="Modelos\DAO\TipoServicioDAO.cs" />
+    <Compile Include="Modelos\DAO\TodosDetallesTicketDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
     <Compile Include="Modelos\Entidades\Cliente.cs" />
     <Compile Include="Modelos\Entidades\EstadoTicket.cs" />
@@ -114,6 +116,18 @@
     <Compile Include="Vistas\TipoServicioView.Designer.cs">
       <DependentUpon>TipoServicioView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\TodosDetallesTicketView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\TodosDetallesTicketView.Designer.cs">
+      <DependentUpon>TodosDetallesTicketView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VerDetallesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VerDetallesView.Designer.cs">
+      <DependentUpon>VerDetallesView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -141,6 +155,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\TipoServicioView.resx">
       <DependentUpon>TipoServicioView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\TodosDetallesTicketView.resx">
+      <DependentUpon>TodosDetallesTicketView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VerDetallesView.resx">
+      <DependentUpon>VerDetallesView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

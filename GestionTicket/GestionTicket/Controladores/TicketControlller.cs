@@ -24,7 +24,13 @@ namespace GestionTicket.Controladores
             vista = view;
             vista.GuardarButton.Click += new EventHandler(GuardarTicket);
             vista.ClienteButton.Click += new EventHandler(MostrarClientes);
-            vista.TipoServicioButton.Click += new EventHandler(MostrarTipoServicio); 
+            vista.TipoServicioButton.Click += new EventHandler(MostrarTipoServicio);
+            vista.Load += Vista_Load;
+        }
+
+        private void Vista_Load(object sender, EventArgs e)
+        {
+            vista.WindowState = FormWindowState.Maximized; 
         }
 
         private void MostrarTipoServicio(object sender, EventArgs e)
@@ -52,21 +58,44 @@ namespace GestionTicket.Controladores
         {
             if (RevisarContenidoControles())
             {
-                ticket.IdCliente = vista.IdCliente;
-                ticket.IdTipoServicio = vista.IdTipoServicio;
-                ticket.Detalle = vista.DetalleTextBox.Text;
-                ticket.Costo = Convert.ToDecimal(vista.CostoTextBox.Text);
+                if (vista.operacion == "Modificar")
+                {
+                    ticket.IdTicket = vista.IdTicket; 
+                    ticket.IdCliente = vista.IdCliente;
+                    ticket.IdTipoServicio = vista.IdTipoServicio;
+                    ticket.Detalle = vista.DetalleTextBox.Text;
+                    ticket.Costo = Convert.ToDecimal(vista.CostoTextBox.Text);
 
-                bool inserto = ticketDAO.AddTicket(ticket);
-                if (inserto)
+                    bool modifico = ticketDAO.ModificarTicket(ticket); 
+
+                    if (modifico)
+                    {
+                        MessageBox.Show("Ticket modificado exitosamente");
+                        LimpiarControles();
+                    } else
+                    {
+                        MessageBox.Show("Ocurrió un problema al intentar modificar el ticket");
+                    } 
+
+                } else
                 {
-                    MessageBox.Show("Ticket agregado exitosamente");
-                    LimpiarControles();
+                    ticket.IdCliente = vista.IdCliente;
+                    ticket.IdTipoServicio = vista.IdTipoServicio;
+                    ticket.Detalle = vista.DetalleTextBox.Text;
+                    ticket.Costo = Convert.ToDecimal(vista.CostoTextBox.Text);
+
+                    bool inserto = ticketDAO.AddTicket(ticket);
+                    if (inserto)
+                    {
+                        MessageBox.Show("Ticket agregado exitosamente");
+                        LimpiarControles();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocurrió un problema al intentar agregar el ticket");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Ocurrió un problema al intentar agregar el ticket");
-                }
+                
             } else
             {
                 return; 
@@ -76,7 +105,6 @@ namespace GestionTicket.Controladores
 
         private void LimpiarControles()
         {
-            vista.EquipoTextBox.Clear();
             vista.ClienteTextBox.Clear();
             vista.TipoServicioTextBox.Clear();
             vista.DetalleTextBox.Clear();
